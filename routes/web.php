@@ -23,9 +23,7 @@ Route::get('/', function () {
 Route::get('/lazy', function () {
 
     $collection = LazyCollection::times( 20)
-        ->map(
-            function($number){ return $number*3;}
-        )
+        ->map( function($number){ return $number*3;} )
     ->all();
 
     dump($collection);
