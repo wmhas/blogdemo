@@ -28,6 +28,8 @@ class TipController extends Controller
             $properties->where('allows_pets', true);
         }
 
+        info('Controller useful information.');
+
         return $properties->get();
     }
 

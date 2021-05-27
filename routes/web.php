@@ -20,6 +20,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('employees', EmployeeController::class);
+
+
+Route::get('/welcome', function () {
+
+    Debugbar::addMessage('Another message', 'mylabel');
+
+    info('This is some useghgful information.');
+
+
+    return view('welcome_oe');
+});
+
+
 Route::get('/lazy', function () {
 
     $collection = LazyCollection::times( 20)
